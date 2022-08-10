@@ -107,7 +107,7 @@ export const mockedTables: T.Table[] = [
     updatedAt: new Date(),
   },
   {
-    id: "3",
+    id: "273bdf1e-5741-5470-a3f0-f4e45f1630b0",
     number: 3,
     createdAt: new Date(),
     updatedAt: new Date(),
