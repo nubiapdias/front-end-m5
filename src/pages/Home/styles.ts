@@ -14,8 +14,8 @@ export const HomeContainer = styled.div`
     rgba(212, 167, 154, 1) 20%,
     rgba(233, 185, 149, 1) 100%
   );
-
-  color: #fff;
+  color: #ebeae6;
+  overflow-y: scroll;
   section {
     width: 100%;
     display: flex;
@@ -29,6 +29,7 @@ export const HomeContainer = styled.div`
 
 export const HomeContentContainer = styled.div`
   width: calc(100% - 518px);
+  padding-left: 6.5rem;
 `;
 
 export const HomeContentHeader = styled.header`
@@ -67,7 +68,7 @@ export const SearchInputContainer = styled.div`
     background: #e9b995;
     width: 120px;
     height: 38px;
-    color: #c2a49c;
+    color:  #c2a49c;
     font-size: 14px;
     :focus {
       outline: none;
@@ -83,7 +84,7 @@ export const CategoriesNavigationBar = styled.div`
 `;
 
 export const CategoriesNavigationButton = styled.button<CategoriesNavigationButtonProps>`
-  color: #fff;
+  color: #ebeae6;
   border: 0;
   cursor: pointer;
   padding-left: 0.3rem;
@@ -91,13 +92,13 @@ export const CategoriesNavigationButton = styled.button<CategoriesNavigationButt
   margin-right: 0.1rem;
   background-color: #c2a49c;
   :hover {
-    color: #ffffff;
+    color: #ebeae6;
   }
   ${({ active }) =>
     active &&
     css`
-      color: #fff;
-      border-bottom: 2px solid #fff;
+      color: #ebeae6;
+      border-bottom: 2px solid #ebeae6;
     `}
 `;
 
@@ -115,12 +116,22 @@ export const TableSelect = styled.select`
   width: 165px;
   height: 48px;
   background-color: #e26b6b;
-  border: 1px solid #393c49;
+  border: 1px solid #c2a49c;
   border-radius: 8px;
-  color: #ffffff;
+  color: #ebeae6;
   padding: 0 1rem;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='red' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
   :focus {
     outline: none;
+  }
+  option {
+    :hover {
+      background-color: #d2d2d2 !important;
+    }
   }
 `;

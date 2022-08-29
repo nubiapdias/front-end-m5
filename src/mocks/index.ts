@@ -85,12 +85,6 @@ export const mockedCategories: T.Category[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-  {
-    id: "56fdac78-e4a9-f45a-ac0f-8fd3091adb0a",
-    name: "favoritos",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
 ];
 
 export const mockedTables: T.Table[] = [
@@ -107,7 +101,7 @@ export const mockedTables: T.Table[] = [
     updatedAt: new Date(),
   },
   {
-    id: "3",
+    id: "273bdf1e-5741-5470-a3f0-f4e45f1630b0",
     number: 3,
     createdAt: new Date(),
     updatedAt: new Date(),
@@ -119,7 +113,7 @@ export const mockedUsers: T.User[] = [
     id: "676db4b1-dcf2-5a91-e21b-b62e51103f00",
     name: "Baiacu",
     email: "Baiacu@peixe.com",
-    password: "admin3498763@",
+    password: "Admin3498763@",
     createdAt: new Date(),
     updatedAt: new Date(),
   },

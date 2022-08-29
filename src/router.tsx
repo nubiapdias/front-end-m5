@@ -1,19 +1,32 @@
-import { Routes, Route } from 'react-router-dom';
-import { RoutePath } from 'types/routes';
-import Home from "pages/Home/index";
-import Login from 'pages/Login/index';
-import { useState } from 'react';
-import Settings from 'pages/settings/index';
+import { Route, Routes, Navigate } from "react-router-dom";
+import { useAuth } from "./contexts/auth";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import SettingsCategories from "./pages/SettingsCategories";
+import SettingsProducts from "./pages/SettingsProducts";
+import SettingsTables from "./pages/SettingsTables";
 
 const Router = () => {
-    const [logged, setLogged] = useState<boolean>(false);
-    return (
-        <Routes>
-            <Route path={RoutePath.HOME} element={<Home setLogged={setLogged}/>} />
-            <Route path="/settings" element={<Settings setLogged={setLogged} />} />
-            <Route path={RoutePath.LOGIN} element={<Login setLogged={setLogged}/>} />
-        </Routes>
-    );
-}
+  const { logged } = useAuth();
+
+  return (
+    <Routes>
+      {logged ? (
+        <>
+          <Route path="/" element={<Home />} />
+          <Route path="/settings/products" element={<SettingsProducts />} />
+          <Route path="/settings/categories" element={<SettingsCategories />} />
+          <Route path="/settings/tables" element={<SettingsTables />} />
+        </>
+      ) : (
+        <Route path="/login" element={<Login />} />
+      )}
+      <Route
+        path="*"
+        element={<Navigate to={logged ? "/" : "/login"} replace />}
+      />
+    </Routes>
+  );
+};
 
 export default Router;

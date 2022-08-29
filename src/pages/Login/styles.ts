@@ -16,7 +16,7 @@ export const LoginPageContainer = styled.div`
   `}
 `;
 
-export const LoginFormContainer = styled.div`
+export const LoginFormContainer = styled.form`
   ${({ theme }) => css`
     width: 24rem;
     height: 28.875rem;
@@ -51,10 +51,6 @@ export const LoginLogoContainer = styled.div`
       border-top: 2px double ${theme.colors.textColor};
       border-bottom: 2px double ${theme.colors.textColor};
       border-spacing: 1px;
-    }
-    img {
-      width: 8rem;
-      height: 8rem;
     }
   `}
 `;

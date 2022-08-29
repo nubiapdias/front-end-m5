@@ -17,6 +17,7 @@ export const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
   img {
     width: 4rem;
     margin: 1.25rem 0;
@@ -67,6 +68,6 @@ export const MenuItemButton = styled.button<MenuItemButtonProps>`
     active &&
     css`
       background-color: #e9b995;
-      color: #ffffff;
+      color: #ebeae6;
     `}
 `;
